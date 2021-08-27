@@ -11,5 +11,4 @@ public class Cars {
 		Car myCar = new Car("Corvette");
 		myCar.start();
 	}
-
 }

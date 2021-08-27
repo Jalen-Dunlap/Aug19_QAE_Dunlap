@@ -11,18 +11,15 @@ public class Car {
 	}
 	
 	public void drive(int distance) {
-		//TODO Will be created later
 	}
 	
 	public void start() {
 		engine.start();
 	}
-	
 
 	public String getModel() {
 		return model;
 	}
-
 	
 	public void setModel(String model) {
 		this.model = model;
