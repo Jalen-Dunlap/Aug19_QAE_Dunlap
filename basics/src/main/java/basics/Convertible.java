@@ -24,6 +24,4 @@ public class Convertible extends Car {
 	public String getTopStatus() {
 		return top;
 	}
-
-	
 }
