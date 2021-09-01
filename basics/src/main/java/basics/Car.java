@@ -3,7 +3,7 @@ package basics;
 public class Car extends Vehicle {
 	private int odometer;
 	private IEngine engine;
-	public String model = "Unknown";
+	public String model;
 	
 	public Car(String string, IEngine engine) {
 		this.setModel(model);

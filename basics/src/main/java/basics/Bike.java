@@ -12,5 +12,4 @@ public class Bike extends Vehicle {
 	public int getOdometer() {
 		return this.odometer;
 	}
-
 }
