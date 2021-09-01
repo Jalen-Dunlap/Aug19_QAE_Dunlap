@@ -2,7 +2,7 @@ package basics;
 
 public class Car {
 	private int odometer;
-	private LargeEngine engine;
+	private IEngine engine;
 	public String model;
 	
 	Car(String model){
@@ -14,7 +14,7 @@ public class Car {
 	}
 	
 	public void start() {
-		engine.start();
+		this.engine.start();
 	}
 
 	public String getModel() {
@@ -25,15 +25,15 @@ public class Car {
 		this.model = model;
 	}
 
-	public LargeEngine getEngine() {
-		return engine;
+	public IEngine getEngine() {
+		return this.engine;
 	}
 	
-	public void setEngine(LargeEngine engine) {
+	public void setEngine(IEngine engine) {
 		this.engine = engine;
 	}
 
 	public int getOdometer() {
-		return odometer;
+		return this.odometer;
 	}
 }
