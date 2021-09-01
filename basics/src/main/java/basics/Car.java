@@ -5,16 +5,12 @@ public class Car extends Vehicle {
 	private IEngine engine;
 	public String model = "Unknown";
 	
-	public Car(String model){
-		this.engine = new LargeEngine();
-		this.setModel(model);
-	}
-
 	public Car(String string, IEngine engine) {
 		this.setModel(model);
 		this.engine = engine;
 	}
 
+	@Override
 	public void drive(int distance) {
 		this.odometer += distance;
 	}
@@ -35,6 +31,7 @@ public class Car extends Vehicle {
 		return this.engine;
 	}
 
+	@Override
 	public int getOdometer() {
 		return this.odometer;
 	}
