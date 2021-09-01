@@ -5,12 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CarsTests {
-
-	@Test
-	public void canBuildCar() {
-		Car myCar = new Car("Corvette");
-		myCar.start();
-	}
 	
 	@Test
 	public void canDriveBike() {
@@ -26,7 +20,7 @@ public class CarsTests {
 	
 	@Test
 	public void canIncrementOdometer(){
-		Car myCar = new Car("Mustang");
+		Car myCar = new Car("Mustang", new LargeEngine());
 		int distanceToDrive = 20;
 		int preDriveMileage = myCar.getOdometer();
 		
