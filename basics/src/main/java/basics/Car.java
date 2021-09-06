@@ -1,20 +1,22 @@
 package basics;
 
-public class Car {
+public class Car extends Vehicle {
 	private int odometer;
-	private LargeEngine engine;
+	private IEngine engine;
 	public String model;
 	
-	Car(String model){
-		this.setEngine(new LargeEngine());
+	public Car(String string, IEngine engine) {
 		this.setModel(model);
+		this.engine = engine;
 	}
-	
+
+	@Override
 	public void drive(int distance) {
+		this.odometer += distance;
 	}
 	
 	public void start() {
-		engine.start();
+		this.engine.start();
 	}
 
 	public String getModel() {
@@ -25,15 +27,12 @@ public class Car {
 		this.model = model;
 	}
 
-	public LargeEngine getEngine() {
-		return engine;
-	}
-	
-	public void setEngine(LargeEngine engine) {
-		this.engine = engine;
+	public IEngine getEngine() {
+		return this.engine;
 	}
 
+	@Override
 	public int getOdometer() {
-		return odometer;
+		return this.odometer;
 	}
 }
