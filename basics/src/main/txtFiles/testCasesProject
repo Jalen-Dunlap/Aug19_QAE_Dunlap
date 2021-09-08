@@ -73,6 +73,27 @@ Test Case 3: FR003 - B1
 		This tests the navigation of the website and its ability to search for purchasable items on the website
 
 
+Test Case 4: FR004 - B2
+	Preconditions:
+	NONE
+	
+	Name: Product Detail Navigation
+	Label: TCProdNavB2
+	Trace: ECommerceBRD - FR004 - B2 
+	
+	Steps:
+		1. Open 2 tabs of the home page of the website
+		2. From the Home page click a category that is below the search bar in each tab
+		3. In the first tab click on an items title
+		4. In the second tab click on the same items image
+	
+	Expected result:
+		The user is shown more details about the item than in the initially shown.
+		  	
+	Summary:
+		This test covers the ability to navigate to an item detail screen by clicking on a title or image of the item. 
+
+
 Bug Reports:
 
 Bug 1: 
