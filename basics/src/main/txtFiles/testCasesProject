@@ -132,6 +132,27 @@ Test Case 6: FR007 - B4
 	Summary:
 		This test confirms that the user can begin the checkout process from the shopping cart and the items are tracked all the way to checkout
 	
+Test Case 7: FR008 - B3
+	Preconditions:
+		1. The user has items in their shopping cart to be purchased
+		2. The user has a valid billing address and shipping address
+	
+	Name: Billing and Shipping Checkout
+	Label: TCAddressCheckoutB3
+	Trace: ECommerceBRD - FR008 - B3
+	
+	Steps:
+		1. From the Home page click on the cart drop down next to the search bar 
+		2. Scroll down the page until you see a green "Proceed to checkout" button and click it
+		3. Sign in to the website or create an account for the website if not already logged in
+		4. Enter valid addresses that are requested (Update if needed)
+	
+	Expected result:
+		The user is asked to fill out information that has their billing and shipping address before filling out payment options.
+	
+	Summary:
+		This test confirms users fill out necessary information before checkout in the form of addresses for shipping and billing.
+
 
 Bug Reports:
 
