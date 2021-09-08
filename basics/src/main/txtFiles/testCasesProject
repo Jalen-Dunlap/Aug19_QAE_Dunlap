@@ -1,1 +1,39 @@
 Jalen Dunlap Test Cases Project
+
+Test Case 1: FR001 - B1
+
+	Preconditions: 
+		User has a valid login email and password for the website. 
+	
+	Name: Login test case
+	
+	Label: TCLogB1
+	
+	Trace: ECommerceBRD - FR001 - B1
+	
+	Steps:
+	1. From the websites home page click the "Sign in" button in the top right corner of the page
+	2. Under the already registered authentication form enter a valid email address
+	3. For the previous step enter the correlating password
+	4. Click the green "Sign in" button on the form
+	
+	Expected result:
+	The user is logged into the website and can continue browsing and shopping while staying logged in to the site.
+	
+	Summary:
+	This test case is to verify that a user is able to successfully log in to the website. 
+
+Test Case 2: FR002 - B1
+
+
+Bug Reports:
+
+Bug 1: 
+1. Title
+2. Environment
+3. Steps to reproduce(Within reason)
+4. Expected result
+5. Actual Result
+6. Visual Proof
+7. Severity and priority (1 Critical - 4 Low)
+8. Related Test Cases and Test Run Result
