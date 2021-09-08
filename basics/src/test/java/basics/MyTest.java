@@ -7,6 +7,7 @@ import org.junit.Test;
 public class MyTest {
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		boolean isBooleanOverlimit = !(2*10<11);
+		System.out.println(isBooleanOverlimit);
 	}
 }
