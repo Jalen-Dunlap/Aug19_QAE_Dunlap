@@ -154,6 +154,26 @@ Test Case 7: FR008 - B3
 		This test confirms users fill out necessary information before checkout in the form of addresses for shipping and billing.
 
 
+Test Case 8: NF001
+	Preconditions:
+	
+	Name: Website concurrent user test
+	Label: NFRConcurrentScale
+	Trace: ECommerceBRD - NFR001 - Scale
+	
+	Steps:
+		1. Acquire 100 users to test a load on the website
+		2. For all of the different users, assign multiple tasks to be accomplished during a set time period 
+		3. View the website during the set time period to confirm the website is accommodating the users 
+	
+	Expected result:
+		The website shows the ability to sustain up 100 users concurrently.
+	
+	Summary:
+		This test finds the websites ability to host up to 100 users on the website at the same time.
+
+
+
 Bug Reports:
 
 Bug 1: 
