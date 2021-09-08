@@ -48,15 +48,70 @@ Test Case 2: FR002 - B1
 		
 	Summary:
 		This test verifies a user can create an account with the website.
+		
+		
+		
+Test Case 3: FR003 - B1
+	Preconditions:
+		1. The user knows keywords for product searches
+		
+	Name: Product Search
+	Label: TCProdSearchB1
+	Trace: ECommerceBRD - FR003 - B1 
+	
+	Steps:
+		1. From the Home Page click a category that is below the search bar
+		2. If a subcategory is available click a sub category
+		3. Repeat step 2 until there are no subcategories
+		4. Under the catalog choose a filter to narrow the scope of the product search
+		
+	
+	Expected result:
+		The user is shown different products related to the category/subcategory used in the search.
+		
+	Summary:
+		This tests the navigation of the website and its ability to search for purchasable items on the website
+
 
 Bug Reports:
 
 Bug 1: 
-1. Title
-2. Environment
-3. Steps to reproduce(Within reason)
-4. Expected result
-5. Actual Result
-6. Visual Proof
-7. Severity and priority (1 Critical - 4 Low)
-8. Related Test Cases and Test Run Result
+	Title: Filter Fail
+	Environment:
+	Steps to reproduce(Within reason)
+	Expected result
+	Actual Result
+	Visual Proof
+	Severity and priority (1 Critical - 4 Low)
+	Related Test Cases and Test Run Result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
