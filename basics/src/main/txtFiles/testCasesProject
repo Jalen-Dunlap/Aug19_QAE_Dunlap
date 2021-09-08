@@ -64,7 +64,6 @@ Test Case 3: FR003 - B1
 		2. If a subcategory is available click a sub category
 		3. Repeat step 2 until there are no subcategories
 		4. Under the catalog choose a filter to narrow the scope of the product search
-		
 	
 	Expected result:
 		The user is shown different products related to the category/subcategory used in the search.
@@ -114,6 +113,7 @@ Test Case 5: FR007 - B1
 	Summary:
 		This test checks that the website adds items to the shopping cart to be purchased later are actually added.
 		
+		
 Test Case 6: FR007 - B4
 	Preconditions:
 		The user knows what items are or are not in their cart
@@ -131,6 +131,7 @@ Test Case 6: FR007 - B4
 		
 	Summary:
 		This test confirms that the user can begin the checkout process from the shopping cart and the items are tracked all the way to checkout
+	
 	
 Test Case 7: FR008 - B3
 	Preconditions:
@@ -172,6 +173,7 @@ Test Case 8: NFR001
 	Summary:
 		This test finds the websites ability to host up to 100 users on the website at the same time.
 
+
 Test Case 9: NFR002
 	Preconditions:
 		1. The tester has good Internet speeds
@@ -192,17 +194,33 @@ Test Case 9: NFR002
 	Summary:
 		Tests the loading speed of the websites pages
 
+
 Bug Reports:
 
 Bug 1: 
 	Title: Filter Fail
-	Environment:
-	Steps to reproduce(Within reason)
-	Expected result
-	Actual Result
-	Visual Proof
-	Severity and priority (1 Critical - 4 Low)
-	Related Test Cases and Test Run Result
+	Environment: 
+		Browser - Google Chrome
+		
+	Steps to reproduce:
+		1. From the Home Page click a category that is below the search bar
+		2. Under the catalog choose a filter to narrow the scope of the product search
+		
+	Expected result:
+		The products shown are filtered by the chosen filter 
+		 
+	Actual Result:
+		There is an infinite loading error that occurs and is not resolved
+		
+	Visual Proof:
+		Linked image named Bug1_Visual.png
+		
+	Severity and priority:
+		Severity: 2
+		Priority: 1
+		
+	Related Test Cases:
+		TCProdSearchB1
 
 
 
