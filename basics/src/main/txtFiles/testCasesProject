@@ -154,7 +154,7 @@ Test Case 7: FR008 - B3
 		This test confirms users fill out necessary information before checkout in the form of addresses for shipping and billing.
 
 
-Test Case 8: NF001
+Test Case 8: NFR001
 	Preconditions:
 	
 	Name: Website concurrent user test
@@ -172,7 +172,25 @@ Test Case 8: NF001
 	Summary:
 		This test finds the websites ability to host up to 100 users on the website at the same time.
 
-
+Test Case 9: NFR002
+	Preconditions:
+		1. The tester has good Internet speeds
+		2. The user has an accurate timing mechanism
+	
+	Name: Website speed test
+	Label: NFRSpeedTestSpeed
+	Trace: ECommerceBRD - NFR002 - Speed
+	
+	Steps:
+		1. From a web browsers default page enter the url of the website
+		2. Start a timer at the same time the url begins loading
+		3. Stop timer 
+	
+	Expected result:
+		A page's load time is tracked and can be compared to the constraint
+	
+	Summary:
+		Tests the loading speed of the websites pages
 
 Bug Reports:
 
