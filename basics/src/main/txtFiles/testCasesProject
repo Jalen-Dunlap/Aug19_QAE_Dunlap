@@ -94,6 +94,45 @@ Test Case 4: FR004 - B2
 		This test covers the ability to navigate to an item detail screen by clicking on a title or image of the item. 
 
 
+Test Case 5: FR007 - B1
+	Preconditions:
+	
+	Name: Shopping Cart Additions
+	Label: TCCartAddB1
+	Trace: ECommerceBRD - FR007 - B1 
+	
+	Steps:
+		1. From the Home page click a category that is below the search bar
+		2. Under an item view click the blue "Add to cart" button
+		3. Choose the "Continue shopping" button 
+		4. Repeat step 2 and 3 with a different item
+		5. Navigate to the top of the page and click on the Cart
+	
+	Expected result:
+		The user will have added an item to be purchased to a shopping cart that is tracked along the use of the website and can view them
+	
+	Summary:
+		This test checks that the website adds items to the shopping cart to be purchased later are actually added.
+		
+Test Case 6: FR007 - B4
+	Preconditions:
+		The user knows what items are or are not in their cart
+	
+	Name: Shopping Cart Checkout
+	Label: TCCartBuyB4
+	Trace: ECommerceBRD - FR007 - B4
+	
+	Steps:
+		1. From the Home page click on the cart drop down next to the search bar 
+		2. Scroll down the page until you see a green "Proceed to checkout" button and click it
+	
+	Expected result:
+		The user is able to start the process of checking out with the items that are in their shopping cart
+		
+	Summary:
+		This test confirms that the user can begin the checkout process from the shopping cart and the items are tracked all the way to checkout
+	
+
 Bug Reports:
 
 Bug 1: 
