@@ -223,7 +223,30 @@ Bug 1:
 		TCProdSearchB1
 
 
-
+Bug X: 
+	Title: Image link failure
+	Environment: 
+		Browser - Google Chrome
+		
+	Steps to reproduce:
+		1. From the Home Page hover over a category that is below the search bar
+		2. Click on image indicating sales
+		
+	Expected result:
+		User is redirected to products involved in the sales on the website
+		 
+	Actual Result:
+		Nothing happens as there is no link to information provided
+		
+	Visual Proof:
+		Linked image named Bug2_Visual.png
+		
+	Severity and priority:
+		Severity:
+		Priority:
+		
+	Related Test Cases:
+		TCProdNavB2
 
 
 
