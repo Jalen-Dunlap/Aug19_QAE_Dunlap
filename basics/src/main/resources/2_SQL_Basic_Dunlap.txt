@@ -1,0 +1,84 @@
+Sakila Database
+Write a SQL statement for each of the following. 
+
+1. Get 10 cities in descending alphabetical order.
+SELECT *
+FROM city
+ORDER BY city DESC
+LIMIT 10;
+
+2. Get all films with "airplane" in the title.
+SELECT *
+FROM film
+WHERE title LIKE '%airplane%';
+
+3. Get the highest payment amount.
+SELECT MAX(amount)
+FROM payment;
+
+4. Get the number of records in the customer table for store id #1.
+SELECT *
+FROM customer
+WHERE store_id = 1;
+
+5. Get all payment records for customer with email address "NANCY.THOMAS@sakilacustomer.org"
+SELECT *
+FROM payment as p
+INNER JOIN customer as c
+ON c.customer_id = p.customer_id
+WHERE c.email = 'NANCY.THOMAS@sakilacustomer.org';
+
+6. Use a View to get the film info for actor Bob Fawcett.
+SELECT *
+FROM actor_info
+WHERE first_name = 'Bob' AND last_name = 'Fawcett';
+
+7. Use a Stored Procedure to get the 4 inventory ids for the film "Alien Center" at Store #2. 
+SELECT film_id
+FROM  film
+WHERE title = 'Alien Center';
+CALL film_in_stock(15,2,@count_out);
+
+8. Insert a new store. Ensure that you use TRANSACTION. (This one is possible but it's tough! 
+   Pay attention to constraints and the order that you are inserting data.) 
+START TRANSACTION;
+SAVEPOINT beforeInsert;
+INSERT INTO staff(staff_id,first_name,last_name,address_id,picture,email,store_id,active,username,password)
+VALUES(3,'John','Doe',5,NULL,'jd@sakila.com',2,1,'jdoe',NULL);
+
+INSERT INTO store(store_id,manager_staff_id,address_id)
+VALUES(3,3,3);
+
+UPDATE staff
+SET store_id = 3
+WHERE staff_id = 3;
+
+COMMIT;
+
+9. Update the timestamp to the current date/time for the new store you entered in the previous question. 
+UPDATE store
+SET last_update = current_timestamp()
+WHERE store_id = 3;
+
+
+10. Delete the new store. 
+START TRANSACTION;
+
+UPDATE staff
+SET store_id = 2
+WHERE staff_id = 3;
+
+delete from store
+where store_id = 3 LIMIT 1;
+
+delete from staff
+where staff_id = 3 LIMIT 1;
+
+COMMIT;
+
+
+https://dev.mysql.com/doc/sakila/en/sakila-introduction.html
+
+	
+
+
