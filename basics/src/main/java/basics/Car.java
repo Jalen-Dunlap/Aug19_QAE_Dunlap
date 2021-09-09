@@ -1,9 +1,9 @@
 package basics;
 
 public class Car extends Vehicle {
-	private int odometer;
 	private IEngine engine;
 	public String model;
+	private boolean isStarted;
 	
 	public Car(String string, IEngine engine) {
 		this.setModel(model);
@@ -12,10 +12,13 @@ public class Car extends Vehicle {
 
 	@Override
 	public void drive(int distance) {
-		this.odometer += distance;
+		if(isStarted) {
+			this.odometer += distance;
+		}
 	}
 	
 	public void start() {
+		isStarted = true;
 		this.engine.start();
 	}
 

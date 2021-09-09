@@ -1,7 +1,7 @@
 package basics;
 
 public class Convertible extends Car {
-	private String top = "Up";
+	private boolean isTopDown;
 
 	public Convertible(String string, IEngine engine) {
 		super(string,engine);
@@ -9,15 +9,15 @@ public class Convertible extends Car {
 
 	public void lowerTop() {
 		System.out.println("Top was lowered.");
-		this.top = "Down";
+		this.isTopDown = true;
 	}
 
 	public void raiseTop() {
 		System.out.println("Top was raised.");
-		this.top = "Up";
+		this.isTopDown = false;
 	}
 
-	public String getTopStatus() {
-		return top;
+	public boolean getTopStatus() {
+		return isTopDown;
 	}
 }

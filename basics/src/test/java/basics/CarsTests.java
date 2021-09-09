@@ -24,6 +24,7 @@ public class CarsTests {
 		int distanceToDrive = 20;
 		int preDriveMileage = myCar.getOdometer();
 		
+		myCar.start();
 		myCar.drive(distanceToDrive);
 		
 		assertTrue("The odometer does not tack mileage.",preDriveMileage+distanceToDrive == myCar.getOdometer());
@@ -56,12 +57,13 @@ public class CarsTests {
 		
 		
 		myConvertible.lowerTop();
-		String afterLower = myConvertible.getTopStatus();
+		boolean afterLower = myConvertible.getTopStatus();
+		
+		assertTrue(afterLower);
 		
 		myConvertible.raiseTop();
-		String afterRaise = myConvertible.getTopStatus();
+		boolean afterRaise = myConvertible.getTopStatus();
 		
-		assertTrue(afterLower.equals("Down"));
-		assertTrue(afterRaise.equals("Up"));		
+		assertTrue(afterRaise);		
 	}
 }
