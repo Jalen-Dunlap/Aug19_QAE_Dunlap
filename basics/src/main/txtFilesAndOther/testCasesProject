@@ -1,0 +1,249 @@
+Jalen Dunlap Test Cases Project
+
+Test Case 1: FR001 - B1
+
+	Preconditions: 
+		1. User has a valid login email and password for the website. 
+	
+	Name: Login test case
+	Label: TCLogB1
+	Trace: ECommerceBRD - FR001 - B1
+	
+	Steps:
+		1. From the websites home page click the "Sign in" button in the top right corner of the page
+		2. Under the "Already registered?" authentication form enter a valid email address
+		3. For the previous step enter the correlating password
+		4. Click the green "Sign in" button on the form
+	
+	Expected result:
+		The user is logged into the website and can continue browsing and shopping while staying logged in to the site.
+	
+	Summary:
+		This test case is to verify that a user is able to successfully log in to the website. 
+
+Test Case 2: FR002 - B1
+	Preconditions:
+		1. User has an email address, contact number, and address
+	
+	Name: Website Registration
+	Label: TCRegB1
+	Trace: ECommerceBRD - FR002 - B1
+	
+	Steps:
+		1. From the websites home page click the "Sign in" button in the top right corner of the page
+		2. Under the "Create an Account" authentication form enter a valid email address
+		3. Click the yellow "Create an account" button below where the email address was entered
+		4. Fill in the fields labeled:
+			First name*
+			Last name*
+			Email* (Might be auto filled)
+			Password*
+			Mobile phone*
+			Enter an Address in the related fields with an "*"
+		5. Click the green "Register" button
+			
+	
+	Expected result:
+		The user will have successfully registered an account with the website and will be logged in and sent to the "My Account" page.
+		
+	Summary:
+		This test verifies a user can create an account with the website.
+		
+		
+		
+Test Case 3: FR003 - B1
+	Preconditions:
+		1. The user knows keywords for product searches
+		
+	Name: Product Search
+	Label: TCProdSearchB1
+	Trace: ECommerceBRD - FR003 - B1 
+	
+	Steps:
+		1. From the Home Page click a category that is below the search bar
+		2. If a subcategory is available click a sub category
+		3. Repeat step 2 until there are no subcategories
+		4. Under the catalog choose a filter to narrow the scope of the product search
+	
+	Expected result:
+		The user is shown different products related to the category/subcategory used in the search.
+		
+	Summary:
+		This tests the navigation of the website and its ability to search for purchasable items on the website
+
+
+Test Case 4: FR004 - B2
+	Preconditions:
+	NONE
+	
+	Name: Product Detail Navigation
+	Label: TCProdNavB2
+	Trace: ECommerceBRD - FR004 - B2 
+	
+	Steps:
+		1. Open 2 tabs of the home page of the website
+		2. From the Home page click a category that is below the search bar in each tab
+		3. In the first tab click on an items title
+		4. In the second tab click on the same items image
+	
+	Expected result:
+		The user is shown more details about the item than in the initially shown.
+		  	
+	Summary:
+		This test covers the ability to navigate to an item detail screen by clicking on a title or image of the item. 
+
+
+Test Case 5: FR007 - B1
+	Preconditions:
+	
+	Name: Shopping Cart Additions
+	Label: TCCartAddB1
+	Trace: ECommerceBRD - FR007 - B1 
+	
+	Steps:
+		1. From the Home page click a category that is below the search bar
+		2. Under an item view click the blue "Add to cart" button
+		3. Choose the "Continue shopping" button 
+		4. Repeat step 2 and 3 with a different item
+		5. Navigate to the top of the page and click on the Cart
+	
+	Expected result:
+		The user will have added an item to be purchased to a shopping cart that is tracked along the use of the website and can view them
+	
+	Summary:
+		This test checks that the website adds items to the shopping cart to be purchased later are actually added.
+		
+		
+Test Case 6: FR007 - B4
+	Preconditions:
+		The user knows what items are or are not in their cart
+	
+	Name: Shopping Cart Checkout
+	Label: TCCartBuyB4
+	Trace: ECommerceBRD - FR007 - B4
+	
+	Steps:
+		1. From the Home page click on the cart drop down next to the search bar 
+		2. Scroll down the page until you see a green "Proceed to checkout" button and click it
+	
+	Expected result:
+		The user is able to start the process of checking out with the items that are in their shopping cart
+		
+	Summary:
+		This test confirms that the user can begin the checkout process from the shopping cart and the items are tracked all the way to checkout
+	
+	
+Test Case 7: FR008 - B3
+	Preconditions:
+		1. The user has items in their shopping cart to be purchased
+		2. The user has a valid billing address and shipping address
+	
+	Name: Billing and Shipping Checkout
+	Label: TCAddressCheckoutB3
+	Trace: ECommerceBRD - FR008 - B3
+	
+	Steps:
+		1. From the Home page click on the cart drop down next to the search bar 
+		2. Scroll down the page until you see a green "Proceed to checkout" button and click it
+		3. Sign in to the website or create an account for the website if not already logged in
+		4. Enter valid addresses that are requested (Update if needed)
+	
+	Expected result:
+		The user is asked to fill out information that has their billing and shipping address before filling out payment options.
+	
+	Summary:
+		This test confirms users fill out necessary information before checkout in the form of addresses for shipping and billing.
+
+
+Test Case 8: NFR001
+	Preconditions:
+	
+	Name: Website concurrent user test
+	Label: NFRConcurrentScale
+	Trace: ECommerceBRD - NFR001 - Scale
+	
+	Steps:
+		1. Acquire 100 users to test a load on the website
+		2. For all of the different users, assign multiple tasks to be accomplished during a set time period 
+		3. View the website during the set time period to confirm the website is accommodating the users 
+	
+	Expected result:
+		The website shows the ability to sustain up 100 users concurrently.
+	
+	Summary:
+		This test finds the websites ability to host up to 100 users on the website at the same time.
+
+
+Test Case 9: NFR002
+	Preconditions:
+		1. The tester has good Internet speeds
+		2. The user has an accurate timing mechanism
+	
+	Name: Website speed test
+	Label: NFRSpeedTestSpeed
+	Trace: ECommerceBRD - NFR002 - Speed
+	
+	Steps:
+		1. From a web browsers default page enter the url of the website
+		2. Start a timer at the same time the url begins loading
+		3. Stop timer 
+	
+	Expected result:
+		A page's load time is tracked and can be compared to the constraint
+	
+	Summary:
+		Tests the loading speed of the websites pages
+
+
+Bug Reports:
+
+Bug 1: 
+	Title: Filter Fail
+	Environment: 
+		Browser - Google Chrome
+		
+	Steps to reproduce:
+		1. From the Home Page click a category that is below the search bar
+		2. Under the catalog choose a filter to narrow the scope of the product search
+		
+	Expected result:
+		The products shown are filtered by the chosen filter 
+		 
+	Actual Result:
+		There is an infinite loading error that occurs and is not resolved
+		
+	Visual Proof:
+		Linked image named Bug1_Visual.png
+		
+	Severity and priority:
+		Severity: 2
+		Priority: 1
+		
+	Related Test Cases:
+		TCProdSearchB1
+
+
+Bug X: 
+	Title: Image link failure
+	Environment: 
+		Browser - Google Chrome
+		
+	Steps to reproduce:
+		1. From the Home Page hover over a category that is below the search bar
+		2. Click on image indicating sales
+		
+	Expected result:
+		User is redirected to products involved in the sales on the website
+		 
+	Actual Result:
+		Nothing happens as there is no link to information provided
+		
+	Visual Proof:
+		Linked image named Bug2_Visual.png
+		
+	Severity and priority:
+		Severity: 3
+		Priority: 4
+		
+	Related Test Cases:
+		TCProdNavB2
