@@ -3,6 +3,7 @@
 	<name>basics</name>
 	<comment></comment>
 	<projects>
+		<project>QAE_Test_Dev_Class</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
