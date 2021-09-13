@@ -1,0 +1,25 @@
+Css Selectors Project Answers
+
+Jalen Dunlap 9/12/2021
+
+
+1. Full Name Text Box Element using id attribute
+"input[id='userName']"
+
+2. 3 Buttons on /buttons
+"button.btn-primary"
+
+3. Span inside footer of /buttons 
+"footer span"
+
+4. 3 list elements inside the unordered list on /menu
+"ul[id='nav'] > li"
+
+5. Option element with value = 4 on /select-menu
+"option[value=4]"
+
+6. JavaScript to get value for element with id = sliderValue on /slider
+document.getElementById("sliderValue").value
+
+7. JavaScript to set the value for element with id = userName on /text-box
+document.getElementById("userName").value = "Jalen Dunlap"

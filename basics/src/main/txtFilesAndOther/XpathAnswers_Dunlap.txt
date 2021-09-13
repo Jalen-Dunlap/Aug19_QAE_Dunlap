@@ -1,0 +1,26 @@
+Xpath Project Answers
+
+Jalen Dunlap 9/12/2021
+
+1.
+"//input[@id='userName']"
+
+2.
+"//button[@class='btn btn-primary']"
+
+3.
+"//div[@class='rt-td'][text()='Vega']"
+
+4.
+"//input[@id='impressiveRadio']/.."
+
+5.
+"//input[@id='impressiveRadio']/ancestor::div"
+
+6.
+"//input[@id='impressiveRadio']/../label"
+Were we supposed to use label to select the sibling or a different method?
+
+7.
+"//button[contains(text(),'Click')]"
+
