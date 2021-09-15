@@ -9,7 +9,7 @@ Jalen Dunlap 9/12/2021
 "//button[@class='btn btn-primary']"
 
 3.
-"//div[@class='rt-td'][text()='Vega']"
+"//div[@class='rt-table']//div[@class='rt-td'][text()='Vega']"
 
 4.
 "//input[@id='impressiveRadio']/.."
