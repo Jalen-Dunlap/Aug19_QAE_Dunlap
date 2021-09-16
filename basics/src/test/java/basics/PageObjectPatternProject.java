@@ -29,7 +29,6 @@ public class PageObjectPatternProject extends TestBase{
 		String currentUrl = this.driver.getCurrentUrl();
 		
 		assertTrue("The end page is not the home page url of: " + homeUrl, currentUrl .equals(homeUrl));
-		
 	}
 
 }
