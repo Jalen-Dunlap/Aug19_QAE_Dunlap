@@ -8,14 +8,6 @@ import basics.pageObjects.ampegPageObjects.AmpegClassicSeriesSvt410HlfProductPag
 import basics.pageObjects.ampegPageObjects.AmpegHomePage;
 
 public class PageObjectPatternProject extends TestBase{
-
-	@Test
-	public void sanityTest() {
-		String currentUrl = this.driver.getCurrentUrl();
-		String expectedUrl = "https://ampeg.com/index.html";
-		
-		assertTrue("Did not reach correct website",currentUrl.equals(expectedUrl));
-	}
 	
 	@Test
 	public void canNavigateToHomePageFromProductDetailsPage() {
