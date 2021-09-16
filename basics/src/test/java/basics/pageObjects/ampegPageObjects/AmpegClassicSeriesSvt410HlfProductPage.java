@@ -2,6 +2,7 @@ package basics.pageObjects.ampegPageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import basics.pageObjects.PageObject;
 
@@ -11,11 +12,11 @@ public class AmpegClassicSeriesSvt410HlfProductPage extends PageObject {
 		super(driver, baseUrl);
 	}
 
-	public String getHandlingWeightSpecification() {
-		String handlingWeight = 
-				this.driver.findElement(By.xpath("//div[@class='specsCopy']/b[last()]")).getText()
-				+
-				this.driver.findElement(By.xpath("//div[@class='specsCopy']/b[last()]/following-sibling::text()[1]")).getText();
+	public String getHandlingWeightSpecification() {		
+		String weight = this.driver.findElement(By.cssSelector("div.specsCopy")).getText();
+		String[] specs = weight.split("\n");
+		
+		String handlingWeight = specs[specs.length-1];
 		
 		return handlingWeight;
 	}
