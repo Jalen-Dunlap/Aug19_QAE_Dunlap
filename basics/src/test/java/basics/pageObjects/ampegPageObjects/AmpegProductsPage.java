@@ -20,7 +20,9 @@ public class AmpegProductsPage extends PageObject {
 	}
 
 	public AmpegClassicSeriesBassHeadsAndEnclosuresProductPage clickClassicSeriesBassHeadsAndEnclosuresProduct() {
-
+		WebElement classicSeries = this.driver.findElement(By.xpath("//table[@id='tableMain']//td[@id='productIndex']//img[@alt='Classic Series: Bass heads & enclosures']/.."));
+		classicSeries.click();
+		
 		return new AmpegClassicSeriesBassHeadsAndEnclosuresProductPage(this.driver,this.baseUrl);
 	}
 }
