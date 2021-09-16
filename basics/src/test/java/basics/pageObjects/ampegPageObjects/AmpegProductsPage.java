@@ -18,4 +18,9 @@ public class AmpegProductsPage extends PageObject {
 		
 		return new AmpegSvtProSeriesProductPage(this.driver,this.baseUrl);
 	}
+
+	public AmpegClassicSeriesBassHeadsAndEnclosuresProductPage clickClassicSeriesBassHeadsAndEnclosuresProduct() {
+
+		return new AmpegClassicSeriesBassHeadsAndEnclosuresProductPage(this.driver,this.baseUrl);
+	}
 }
