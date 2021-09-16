@@ -1,4 +1,4 @@
-package basics;
+package basics.pageObjects.ampegPageObjects;
 
 import org.openqa.selenium.WebDriver;
 
@@ -13,5 +13,4 @@ public class SvtProSeriesProductPage extends PageObject {
 	public Svt3ProProductPage clickSvt3ProLink() {
 		return new Svt3ProProductPage(this.driver,this.baseUrl);
 	}
-
 }

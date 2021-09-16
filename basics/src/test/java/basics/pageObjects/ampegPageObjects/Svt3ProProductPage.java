@@ -1,4 +1,4 @@
-package basics;
+package basics.pageObjects.ampegPageObjects;
 
 import org.openqa.selenium.WebDriver;
 
@@ -13,5 +13,4 @@ public class Svt3ProProductPage extends PageObject {
 	public AmpegHomePage clickHomeBreadcrumbLink() {
 		return new AmpegHomePage(this.driver,this.baseUrl);
 	}
-
 }

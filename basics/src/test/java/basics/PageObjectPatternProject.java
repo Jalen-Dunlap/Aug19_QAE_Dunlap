@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import basics.pageObjects.ampegPageObjects.AmpegHomePage;
+
 public class PageObjectPatternProject extends TestBase{
 
 	@Test
