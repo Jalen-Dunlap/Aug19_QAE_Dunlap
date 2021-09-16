@@ -18,7 +18,7 @@ public class PageObjectPatternProject extends TestBase{
 	public void canNavigateToHomePageFromProductDetailsPage() {
 		String homeUrl = this.baseUrl + "/index.html";
 		
-		AmpegHomePage page = new AmpegHomePage()
+		AmpegHomePage page = new AmpegHomePage(this.driver,this.baseUrl)
 				.clickProductsLinkInMenu()
 				.clickSvtProSeriesBassHeadsProduct()
 				.clickSvt3ProLink()

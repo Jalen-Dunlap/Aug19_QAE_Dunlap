@@ -10,4 +10,8 @@ public class AmpegHomePage extends PageObject {
 		super(driver, baseUrl);
 	}
 
+	public ProductsPage clickProductsLinkInMenu() {
+		return new ProductsPage(this.driver,this.baseUrl);
+	}
+
 }
