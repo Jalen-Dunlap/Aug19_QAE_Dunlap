@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 
 import basics.pageObjects.PageObject;
 
-public class Svt3ProProductPage extends PageObject {
+public class AmpegSvt3ProProductPage extends PageObject {
 
-	protected Svt3ProProductPage(WebDriver driver, String baseUrl) {
+	protected AmpegSvt3ProProductPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
 

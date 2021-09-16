@@ -6,16 +6,16 @@ import org.openqa.selenium.WebElement;
 
 import basics.pageObjects.PageObject;
 
-public class ProductsPage extends PageObject {
+public class AmpegProductsPage extends PageObject {
 
-	protected ProductsPage(WebDriver driver, String baseUrl) {
+	protected AmpegProductsPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
 
-	public SvtProSeriesProductPage clickSvtProSeriesBassHeadsProduct() {
+	public AmpegSvtProSeriesProductPage clickSvtProSeriesBassHeadsProduct() {
 		WebElement proSeries = this.driver.findElement(By.xpath("//table[@id='tableMain']//td[@id='productIndex']//img[@alt='SVT Pro Series: Bass heads']/.."));
 		proSeries.click();
 		
-		return new SvtProSeriesProductPage(this.driver,this.baseUrl);
+		return new AmpegSvtProSeriesProductPage(this.driver,this.baseUrl);
 	}
 }

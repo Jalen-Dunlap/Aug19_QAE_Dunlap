@@ -12,10 +12,10 @@ public class AmpegHomePage extends PageObject {
 		super(driver, baseUrl);
 	}
 
-	public ProductsPage clickProductsLinkInMenu() {
+	public AmpegProductsPage clickProductsLinkInMenu() {
 		WebElement productsLink = this.driver.findElement(By.xpath("//div[@class='header-nav']//a[@title='Products']"));
 		productsLink.click();
 		
-		return new ProductsPage(this.driver,this.baseUrl);
+		return new AmpegProductsPage(this.driver,this.baseUrl);
 	}
 }
