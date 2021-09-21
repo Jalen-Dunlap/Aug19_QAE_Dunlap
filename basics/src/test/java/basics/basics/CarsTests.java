@@ -1,4 +1,4 @@
-package basics;
+package basics.basics;
 
 import static org.junit.Assert.*;
 

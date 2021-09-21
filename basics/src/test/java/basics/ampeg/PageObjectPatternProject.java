@@ -1,9 +1,10 @@
-package basics;
+package basics.ampeg;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import basics.TestBase;
 import basics.pageObjects.ampegPageObjects.AmpegClassicSeriesSvt410HlfProductPage;
 import basics.pageObjects.ampegPageObjects.AmpegHomePage;
 

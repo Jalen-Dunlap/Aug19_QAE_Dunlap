@@ -1,4 +1,4 @@
-package basics.pageObjects;
+package basics.framework;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

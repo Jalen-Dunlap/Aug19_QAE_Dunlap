@@ -1,4 +1,4 @@
-package basics;
+package basics.seleniumDev;
 
 import static org.junit.Assert.*;
 
@@ -7,9 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import basics.pageObjects.SeleniumDevHomePage;
-import basics.pageObjects.WebDriverDocumentationPage;
 
 public class SeleniumTests {
 	final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver";
@@ -44,7 +41,6 @@ public class SeleniumTests {
 	
 	@Test
 	public void canDemoPageObjectPattern() {
-		SeleniumDevHomePage page = 
 				new SeleniumDevHomePage(this.driver, this.baseUrl)
 				.clickReadMoreButtonSeleniumWebDriver()
 				.clickUnderstandingTheComponentsLink()

@@ -1,4 +1,4 @@
-package basics.pageObjects.ampegPageObjects;
+package basics.ampeg;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

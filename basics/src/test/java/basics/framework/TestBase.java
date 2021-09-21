@@ -1,4 +1,4 @@
-package basics;
+package basics.framework;
 
 import org.junit.After;
 import org.junit.Before;
