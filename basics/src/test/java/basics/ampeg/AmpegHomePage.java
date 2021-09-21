@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import basics.pageObjects.PageObject;
+import basics.framework.PageObject;
 
 public class AmpegHomePage extends PageObject {
 

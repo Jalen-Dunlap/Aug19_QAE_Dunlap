@@ -4,22 +4,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import basics.TestBase;
-import basics.pageObjects.ampegPageObjects.AmpegClassicSeriesSvt410HlfProductPage;
-import basics.pageObjects.ampegPageObjects.AmpegHomePage;
+import basics.framework.TestBase;
 
 public class PageObjectPatternProject extends TestBase{
 	
 	@Test
 	public void canNavigateToHomePageFromProductDetailsPage() {
 		String homeUrl = this.baseUrl + "/index.html";
-		
-		AmpegHomePage page = 
-				new AmpegHomePage(this.driver,this.baseUrl)
-				.clickProductsLinkInMenu()
-				.clickSvtProSeriesBassHeadsProduct()
-				.clickSvt3ProLink()
-				.clickHomeBreadcrumbLink();
+
+		new AmpegHomePage(this.driver,this.baseUrl)
+		.clickProductsLinkInMenu()
+		.clickSvtProSeriesBassHeadsProduct()
+		.clickSvt3ProLink()
+		.clickHomeBreadcrumbLink();
 		
 		String currentUrl = this.driver.getCurrentUrl();
 		
