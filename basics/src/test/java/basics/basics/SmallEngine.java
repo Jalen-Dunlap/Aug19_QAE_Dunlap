@@ -1,4 +1,4 @@
-package basics;
+package basics.basics;
 
 public class SmallEngine implements IEngine{
 	private final int cylinderCount = 4;

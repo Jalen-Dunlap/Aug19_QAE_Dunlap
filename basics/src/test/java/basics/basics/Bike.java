@@ -1,4 +1,4 @@
-package basics;
+package basics.basics;
 
 public class Bike extends Vehicle {
 	@Override

@@ -1,4 +1,4 @@
-package basics;
+package basics.basics;
 
 public abstract class Vehicle {
 	protected int odometer;

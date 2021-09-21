@@ -1,4 +1,4 @@
-package basics;
+package basics.basics;
 
 public class Convertible extends Car {
 	private boolean isTopDown;
