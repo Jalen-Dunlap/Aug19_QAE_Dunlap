@@ -1,8 +1,10 @@
-package basics.basics;
+package basics.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import basics.basics.*;
 
 public class CarsTests {
 	

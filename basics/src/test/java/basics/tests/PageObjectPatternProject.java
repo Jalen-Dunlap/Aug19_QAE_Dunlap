@@ -1,9 +1,10 @@
-package basics.ampeg;
+package basics.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import basics.ampeg.*;
 import basics.framework.TestBase;
 
 public class PageObjectPatternProject extends TestBase{
