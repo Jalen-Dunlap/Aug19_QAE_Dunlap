@@ -1,5 +1,7 @@
 package basics.basics;
 
+import basics.basics.foundation.IEngine;
+
 public class SmallEngine implements IEngine{
 	private final int cylinderCount = 4;
 	

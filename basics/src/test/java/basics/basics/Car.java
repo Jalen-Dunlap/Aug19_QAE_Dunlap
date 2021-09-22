@@ -1,5 +1,8 @@
 package basics.basics;
 
+import basics.basics.foundation.IEngine;
+import basics.basics.foundation.Vehicle;
+
 public class Car extends Vehicle {
 	private IEngine engine;
 	public String model;

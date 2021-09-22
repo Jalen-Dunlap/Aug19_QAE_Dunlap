@@ -1,5 +1,7 @@
 package basics.basics;
 
+import basics.basics.foundation.IEngine;
+
 public class Convertible extends Car {
 	private boolean isTopDown;
 
