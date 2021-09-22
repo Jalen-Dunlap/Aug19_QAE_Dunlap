@@ -1,12 +1,13 @@
-package basics.tests;
+package basics.ampeg.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import basics.ampeg.*;
+import basics.ampeg.foundation.AmpegTestBase;
+import basics.ampeg.pageObjects.AmpegHomePage;
 
-public class PageObjectPatternProject extends AmpegTestBase{
+public class AmpegTests extends AmpegTestBase{
 
 	@Test
 	public void canNavigateToHomePageFromProductDetailsPage() {

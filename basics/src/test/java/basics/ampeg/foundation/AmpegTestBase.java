@@ -1,4 +1,4 @@
-package basics.ampeg;
+package basics.ampeg.foundation;
 
 import basics.framework.TestBase;
 
