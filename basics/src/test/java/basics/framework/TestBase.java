@@ -22,13 +22,17 @@ public abstract class TestBase {
 		this.driverManager = WebDriverFactory.getManager(settings.browserType);
 		this.driverManager.createDriver();
 		
-		driverManager.getDriver().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
-		driverManager.getDriver().manage().window().maximize();
-		driverManager.getDriver().navigate().to(this.baseUrl);
+		getDriver().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		getDriver().navigate().to(this.baseUrl);
 	}
 	
 	@After
 	public void cleanup() {
 		this.driverManager.quitDriver();
+	}
+	
+	public WebDriver getDriver() {
+		return this.driverManager.getDriver();
 	}
 }
