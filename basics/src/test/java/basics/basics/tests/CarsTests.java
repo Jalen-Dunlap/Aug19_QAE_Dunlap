@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import basics.basics.*;
-import basics.basics.foundation.*;
 
 public class CarsTests {
 	

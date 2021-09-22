@@ -1,10 +1,8 @@
-package basics.seleniumDev;
+package basics.seleniumDev.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverDocumentationPage{
 	private String baseUrl;
@@ -16,10 +14,6 @@ public class WebDriverDocumentationPage{
 		this.driver = driver;
 		this.baseUrl = baseUrl;
 		this.fullUrl = this.baseUrl + this.url;
-		
-		long elementToBeClickableTimeoutSeconds = 5;
-		WebDriverWait urlChangedWait = new WebDriverWait(this.driver, elementToBeClickableTimeoutSeconds);
-		urlChangedWait.until(ExpectedConditions.urlToBe(fullUrl));
 	}
 	
 	public UnderstandingTheComponentsPage clickUnderstandingTheComponentsLink() {
