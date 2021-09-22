@@ -5,10 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import basics.ampeg.*;
-import basics.framework.TestBase;
 
 public class PageObjectPatternProject extends AmpegTestBase{
-	
+
 	@Test
 	public void canNavigateToHomePageFromProductDetailsPage() {
 		String homeUrl = this.baseUrl + "/index.html";

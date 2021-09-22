@@ -1,10 +1,10 @@
-package basics.tests;
+package basics.ampeg;
 
 import basics.framework.TestBase;
 
 public abstract class AmpegTestBase extends TestBase {
 
-	protected AmpegTestBase(String baseUrl) {
+	protected AmpegTestBase() {
 		super("https://ampeg.com");
 	}
 }
