@@ -11,7 +11,7 @@ public class ConfigReader {
 
 	public static String getBrowserType() {
 		try {
-			FileReader stream = new FileReader("/basics/resources/config.properties");
+			FileReader stream = new FileReader("src/../resources/config.properties");
 			BufferedReader reader = new BufferedReader(stream);
 			String browserType = reader.readLine().split(":")[1];
 			reader.close();
