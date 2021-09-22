@@ -2,7 +2,7 @@ package basics.framework;
 
 import org.openqa.selenium.WebDriver;
 
-public abstract class DriverManger {
+public abstract class DriverManager {
 	protected WebDriver driver;
 	
 	public void createDriver() {

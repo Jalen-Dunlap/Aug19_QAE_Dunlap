@@ -2,7 +2,7 @@ package basics.framework;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ChromeDriverManger extends DriverManger {
+public class ChromeDriverManager extends DriverManager {
 
 	@Override
 	public void createDriver() {

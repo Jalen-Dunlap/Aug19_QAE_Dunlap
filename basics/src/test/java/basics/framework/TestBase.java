@@ -8,14 +8,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public abstract class TestBase {	
-	protected WebDriver driver;
+	protected DriverManager driverManager;
 	protected String baseUrl;
-	private String driverType;
+	protected String driverType;
+	protected WebDriver driver;
 	
 	protected TestBase(String baseUrl) {
 		this.baseUrl = baseUrl;
-		
-		this.driver = new ChromeDriver();//WebDriverFactory.getManager(driverType);
+		this.driverManager = WebDriverFactory.getManager(driverType);
+		driverManager.createDriver();
+		this.driver = driverManager.getDriver();
 	}
 	
 	@Before
