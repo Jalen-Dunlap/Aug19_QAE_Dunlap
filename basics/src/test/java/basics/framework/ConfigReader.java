@@ -4,34 +4,38 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Properties;
 
 import javax.naming.ConfigurationException;
 
 public class ConfigReader {
+	private static Properties properties;
 
-	public static String getBrowserType() {
+	public static HashMap<String, String> readConfig() {
+		HashMap<String, String> configProperties = new HashMap<String, String>();
+		
 		try {
 			FileReader stream = new FileReader("src/../resources/config.properties");
-			BufferedReader reader = new BufferedReader(stream);
-			String browserType = reader.readLine().split(":")[1];
-			reader.close();
-
-			if (!DriverTypes.driverList().containsKey(browserType)) {
-				throw new ConfigurationException();
-			} else {
-				return browserType;
+			properties = new Properties();
+			
+			try {
+				properties.load(stream);
+			} catch (IOException ex) {
+				System.out.println("Unable to load from config.properties.");
 			}
+			stream.close();
 
 		} catch (FileNotFoundException ex) {
-			System.out.println("Defaulting browser type to chrome.FNFE");
-			return "chrome";
+			System.out.println("The config.properties file was not found");
 		} catch (IOException ex) {
-			System.out.println("Unable to read config.properties, defaulting to chrome");
-			return "chrome";
-		} catch (ConfigurationException e) {
-			System.out.println("Could not identify BrowserType in config.properties, defaulting to chrome.");
-			return "chrome";
+			System.out.println("Unable to read config.properties.");
 		}
+		
+		for() {
+			
+		}
+		
+		return configProperties;
 	}
-
 }
