@@ -5,14 +5,16 @@ public class WebDriverFactory {
 	public static DriverManager getManager(String driverType) {
 		
 		System.setProperty("webdriver." + driverType + ".driver"
-				, "src/../resources/" + DriverTypes.driverList().get(driverType));
+				, "src/../resources/" + DriverTypes.driverList().get(driverType));//Move to drive manger spec
 		
 		if (driverType.equals("edge")) {
 			return new EdgeDriverManager();
-		}else if (driverType.equals("chrome")) {
+		} 
+		
+		if (driverType.equals("chrome")) {
 			return new ChromeDriverManager();
-		}else {
-			return null;
 		}
+		
+		throw new IllegalArgumentException(driverType+" is not a supported Browser type.");
 	}
 }

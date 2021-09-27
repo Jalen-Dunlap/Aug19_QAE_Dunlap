@@ -21,7 +21,7 @@ public abstract class TestBase {
 		this.driverManager = WebDriverFactory.getManager(settings.browserType);
 		this.driverManager.createDriver();
 		
-		getDriver().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		getDriver().manage().window().maximize();
 		getDriver().navigate().to(this.baseUrl);
 	}
