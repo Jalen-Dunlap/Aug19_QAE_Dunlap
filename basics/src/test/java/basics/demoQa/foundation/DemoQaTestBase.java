@@ -2,10 +2,10 @@ package basics.demoQa.foundation;
 
 import basics.framework.TestBase;
 
-public class DemoQaTests extends TestBase {
+public class DemoQaTestBase extends TestBase {
 
-	protected DemoQaTests() {
-		super("www.demoqa.com");
+	protected DemoQaTestBase() {
+		super("https://www.demoqa.com/");
 	}
 
 	public void goTo(String url) {

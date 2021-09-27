@@ -2,12 +2,11 @@ package basics.demoQa.tests;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import basics.demoQa.foundation.DemoQaTests;
+import basics.demoQa.foundation.DemoQaTestBase;
 
-public class TextBoxTests extends DemoQaTests{
+public class TextBoxTests extends DemoQaTestBase{
 
 	@Test
 	/*	Manual Test
@@ -19,10 +18,7 @@ public class TextBoxTests extends DemoQaTests{
 	 *  Confirm the labels match the entered information 
 	 */
 	public void canFillOutPageForm() {
-	}
-
-	@Before
-	public void setup() {
 		goTo("/text-box");
+		TextBoxPage page = new TextBoxPage(getDriver(),getDriver().getCurrentUrl());
 	}
 }
