@@ -1,4 +1,4 @@
-package basics.basics;
+package basics.basics.foundation;
 
 public interface IEngine {
 	public void start();

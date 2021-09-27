@@ -1,29 +1,37 @@
 package basics.framework;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public abstract class TestBase {
-	final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver";
-	
-	protected WebDriver driver;
+public abstract class TestBase {	
+	protected DriverManager driverManager;
 	protected String baseUrl;
+	private Settings settings;
+	
+	protected TestBase(String baseUrl) {
+		this.baseUrl = baseUrl;
+		this.settings = Settings.get();
+	}
 	
 	@Before
 	public void setup() {
-		String chromeDriverPath = "C:\\\\Users\\jjina\\Desktop\\Quintrix_Training\\chromedriver.exe";
-		System.setProperty(WEB_DRIVER_SYSTEM_PROPERTY, chromeDriverPath);
-		this.baseUrl = "https://ampeg.com";
+		this.driverManager = WebDriverFactory.getManager(settings.browserType);
+		this.driverManager.createDriver();
 		
-		this.driver = new ChromeDriver();
-		this.driver.manage().window().maximize();
-		this.driver.navigate().to(this.baseUrl);
+		getDriver().manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		getDriver().manage().window().maximize();
+		getDriver().navigate().to(this.baseUrl);
 	}
 	
 	@After
 	public void cleanup() {
-		this.driver.quit();
+		this.driverManager.quitDriver();
+	}
+	
+	public WebDriver getDriver() {
+		return this.driverManager.getDriver();
 	}
 }

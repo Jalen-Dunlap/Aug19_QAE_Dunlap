@@ -1,4 +1,4 @@
-package basics.tests;
+package basics.seleniumDev.tests;
 
 import static org.junit.Assert.*;
 
@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import basics.seleniumDev.*;
+import basics.seleniumDev.pageObjects.*;
 
 public class SeleniumTests {
 	final String WEB_DRIVER_SYSTEM_PROPERTY = "webdriver.chrome.driver";

@@ -1,33 +1,33 @@
-package basics.tests;
+package basics.ampeg.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import basics.ampeg.*;
-import basics.framework.TestBase;
+import basics.ampeg.foundation.AmpegTestBase;
+import basics.ampeg.pageObjects.AmpegHomePage;
 
-public class PageObjectPatternProject extends TestBase{
-	
+public class AmpegTests extends AmpegTestBase{
+
 	@Test
 	public void canNavigateToHomePageFromProductDetailsPage() {
 		String homeUrl = this.baseUrl + "/index.html";
 
-		new AmpegHomePage(this.driver,this.baseUrl)
+		new AmpegHomePage(this.getDriver(),this.baseUrl)
 		.clickProductsLinkInMenu()
 		.clickSvtProSeriesBassHeadsProduct()
 		.clickSvt3ProLink()
 		.clickHomeBreadcrumbLink();
 		
-		String currentUrl = this.driver.getCurrentUrl();
+		String currentUrl = this.getDriver().getCurrentUrl();
 		
-		assertTrue("The end page is not the home page url of: " + homeUrl, currentUrl .equals(homeUrl));
+		assertTrue("The end page is not the home page url of: " + homeUrl, currentUrl.equals(homeUrl));
 	}
 
 	@Test
 	public void canGetHandleWeightOfSvt410HlfAmp() {
 		String handlingWeight = 
-				new AmpegHomePage(this.driver,this.baseUrl)
+				new AmpegHomePage(this.getDriver(),this.baseUrl)
 				.clickProductsLinkInMenu()
 				.clickClassicSeriesBassHeadsAndEnclosuresProduct()
 				.clickAmpegClassicSeriesSvt410HlfProduct()
