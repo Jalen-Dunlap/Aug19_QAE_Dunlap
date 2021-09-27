@@ -2,16 +2,29 @@ package basics.basics.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+
 import org.junit.Test;
+
+import basics.framework.ConfigurationProvider;
 
 public class JavaIOTest {
 	
 	@Test
 	public void canGetBrowserTypeFromConfig() {
-		//create string
-		//get string from config
-		//assert strings are equal to "chrome"
+		String browserExpected = "chrome";
+		String browserRetrieved = null;
+		String file = "config.properties";
+		HashMap<String, String> configProperties = null;
 		
+		try {
+			configProperties = new ConfigurationProvider().getPropertiesFromResourceFile(file);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		browserRetrieved = configProperties.get("BrowserType");
+		
+		assertEquals("The browser found was not " + browserExpected,browserRetrieved ,browserExpected);
 	}
 
 	@Test
