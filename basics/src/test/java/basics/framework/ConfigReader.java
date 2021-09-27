@@ -1,13 +1,10 @@
 package basics.framework;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
-
-import javax.naming.ConfigurationException;
 
 public class ConfigReader {
 	private static Properties properties;
@@ -32,8 +29,9 @@ public class ConfigReader {
 			System.out.println("Unable to read config.properties.");
 		}
 		
-		for() {
-			
+		for(String key : properties.stringPropertyNames()) {
+			String value = properties.getProperty(key);
+			configProperties.put(key, value);
 		}
 		
 		return configProperties;
