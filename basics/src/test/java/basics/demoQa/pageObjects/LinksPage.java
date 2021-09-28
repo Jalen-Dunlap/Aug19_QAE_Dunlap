@@ -8,7 +8,6 @@ import org.openqa.selenium.support.How;
 import basics.framework.PageObject;
 
 public class LinksPage extends PageObject {
-
 	public LinksPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
@@ -25,4 +24,19 @@ public class LinksPage extends PageObject {
 		return new DemoQaHomePage(this.driver,this.baseUrl);
 	}
 
+	@FindBy(how=How.CSS, using="a#created")
+	private WebElement createdLink;
+	
+	public LinksPage clickCreatedLink() {
+		createdLink.click();
+		return this;
+	}
+
+	@FindBy(how=How.CSS, using="p#linkResponse")
+	private WebElement responseText;
+	
+	public String getResponseText() {
+		String response = responseText.getText();
+		return response;
+	}
 }

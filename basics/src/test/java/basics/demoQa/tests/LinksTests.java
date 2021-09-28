@@ -30,8 +30,19 @@ public class LinksTests extends DemoQaTestBase{
 	}
 
 	@Test
+	/*	Manual Test
+	 *	Go to /links
+	 * 	Click the Created Link
+	 *  Assert that the appeared text matches
+	 */
 	public void canClickCreatedLinkFromLinks() {
+		goTo("links");
+		String expectedText = "Link has responded with staus 201 and status text Created";
+		
+		String actualText = new LinksPage(getDriver(), getDriver().getCurrentUrl())
+		.clickCreatedLink()
+		.getResponseText();
 
+		assertEquals("Text does not match after clicking 'Created' link", actualText, expectedText);
 	}
-
 }
