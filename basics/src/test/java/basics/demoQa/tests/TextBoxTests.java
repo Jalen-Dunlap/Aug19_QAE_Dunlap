@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import basics.demoQa.foundation.DemoQaTestBase;
+import basics.demoQa.pageObjects.TextBoxPage;
 
 public class TextBoxTests extends DemoQaTestBase{
 

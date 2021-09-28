@@ -1,4 +1,4 @@
-package basics.demoQa.tests;
+package basics.demoQa.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import basics.framework.PageObject;
 
 public class TextBoxPage extends PageObject {
-	protected TextBoxPage(WebDriver driver, String baseUrl) {
+	public TextBoxPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
 
