@@ -46,5 +46,4 @@ public class RadioButtonTests extends DemoQaTestBase{
 		
 		assertEquals("Text does not match for yes button", actualPopupText, expectedText);
 	}
-
 }

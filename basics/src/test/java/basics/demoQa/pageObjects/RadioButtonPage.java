@@ -15,26 +15,26 @@ public class RadioButtonPage extends PageObject {
 	@FindBy(how=How.CSS, using="label[for='yesRadio']")
 	private WebElement yesRadio;
 	
+	@FindBy(how=How.CSS, using="p.mt-3")
+	private WebElement popup;
+
+	@FindBy(how=How.CSS, using="label[for='impressiveRadio']")
+	private WebElement impressiveRadio;
+	
 	public RadioButtonPage clickYesRadioButton() {
 		yesRadio.click();
-		
+
 		return this;
 	}
 
-	@FindBy(how=How.CSS, using="p.mt-3")
-	private WebElement popup;
-	
 	public String getPopupText() {
 		String popupText = popup.getText();
 		return popupText;
 	}
-	
-	@FindBy(how=How.CSS, using="label[for='impressiveRadio']")
-	private WebElement impressiveRadio;
-	
+
 	public RadioButtonPage clickImpressiveRadioButton() {
 		impressiveRadio.click();
-		
+
 		return this;
 	}
 }

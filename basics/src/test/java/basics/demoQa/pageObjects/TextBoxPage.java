@@ -24,6 +24,21 @@ public class TextBoxPage extends PageObject {
 	@FindBy(how=How.CSS, using="textArea#permanentAddress")
 	private WebElement permanentAddressBox;
 
+	@FindBy(how=How.CSS, using="button#submit")
+	private WebElement submit;	
+	
+	@FindBy(how=How.CSS, using="p#name")
+	private WebElement labelName;
+	
+	@FindBy(how=How.CSS, using="p#currentAddress")
+	private WebElement labelcurAddress;
+	
+	@FindBy(how=How.CSS, using="p#permanentAddress")
+	private WebElement labelPermAddress;
+	
+	@FindBy(how=How.CSS, using="p#email")
+	private WebElement labelEmail;
+	
 	public TextBoxPage enterUserName(String name) {
 		userNameBox.sendKeys(name);
 
@@ -47,9 +62,6 @@ public class TextBoxPage extends PageObject {
 
 		return this;
 	}
-
-	@FindBy(how=How.CSS, using="button#submit")
-	private WebElement submit;	
 	
 	public TextBoxPage clickSubmit() {
 		submit.click();
@@ -57,36 +69,23 @@ public class TextBoxPage extends PageObject {
 		return this;
 	}
 
-	@FindBy(how=How.CSS, using="p#name")
-	private WebElement labelName;
-
 	public String getLabelName() {
 		String name = labelName.getText();
 		return name;
 	}
 
-	@FindBy(how=How.CSS, using="p#email")
-	private WebElement labelEmail;
-
 	public String getEmail() {
 		String email = labelEmail.getText();
 		return email;
 	}
-
-	@FindBy(how=How.CSS, using="p#currentAddress")
-	private WebElement labelcurAddress;
 	
 	public String getCurrentAddress() {
 		String curAddress = labelcurAddress.getText();
 		return curAddress;
 	}
 
-	@FindBy(how=How.CSS, using="p#permanentAddress")
-	private WebElement labelPermAddress;
-	
 	public String getPermanentAddress() {
 		String permAddress = labelPermAddress.getText();
 		return permAddress;
 	}
-
 }

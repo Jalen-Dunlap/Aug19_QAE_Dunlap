@@ -9,5 +9,4 @@ public class ToolsQaSeleniumTrainingPage extends PageObject {
 	protected ToolsQaSeleniumTrainingPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
-
 }

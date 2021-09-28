@@ -29,6 +29,4 @@ public class DemoQaHomePage extends PageObject {
 		driver.navigate().to(this.baseUrl+url);
 		return new DynamicPropertiesPage(this.driver,this.baseUrl);
 	}
-	
-	
 }
