@@ -9,7 +9,7 @@ import basics.framework.PageObject;
 
 public class DemoQaHomePage extends PageObject {
 
-	protected DemoQaHomePage(WebDriver driver, String baseUrl) {
+	public DemoQaHomePage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
 
@@ -22,7 +22,12 @@ public class DemoQaHomePage extends PageObject {
 		String[] windows = driver.getWindowHandles().toArray(new String[4]);
 		driver.switchTo().window(windows[2]);
 		
-		return new ToolsQaSeleniumTrainingPage(driver,baseUrl);
+		return new ToolsQaSeleniumTrainingPage(this.driver,this.baseUrl);
+	}
+
+	public DynamicPropertiesPage goTo(String url) {
+		driver.navigate().to(this.baseUrl+url);
+		return new DynamicPropertiesPage(this.driver,this.baseUrl);
 	}
 	
 	
