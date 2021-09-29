@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import basics.demoQa.foundation.TextBoxControlExtension;
 import basics.framework.PageObject;
 
 public class TextBoxPage extends PageObject {
@@ -40,25 +41,29 @@ public class TextBoxPage extends PageObject {
 	private WebElement labelEmail;
 	
 	public TextBoxPage enterUserName(String name) {
-		userNameBox.sendKeys(name);
-
+		TextBoxControlExtension fullNameTextBox = getTextBox(userNameBox);
+		fullNameTextBox.setValue(name);
+		
 		return this;
 	}
 
 	public TextBoxPage enterEmail(String email) {
-		emailBox.sendKeys(email);
+		TextBoxControlExtension emailTextBox = getTextBox(emailBox);
+		emailTextBox.setValue(email);
 
 		return this;
 	}
 
 	public TextBoxPage enterCurrentAddress(String curAddress) {
-		currentAddressBox.sendKeys(curAddress);
+		TextBoxControlExtension curAddressTextBox = getTextBox(currentAddressBox);
+		curAddressTextBox.setValue(curAddress);
 
 		return this;
 	}
 
 	public TextBoxPage enterPermanentAddress(String permAddress) {
-		permanentAddressBox.sendKeys(permAddress);
+		TextBoxControlExtension permAddressBox = getTextBox(permanentAddressBox);
+		permAddressBox.setValue(permAddress);
 
 		return this;
 	}
@@ -87,5 +92,9 @@ public class TextBoxPage extends PageObject {
 	public String getPermanentAddress() {
 		String permAddress = labelPermAddress.getText();
 		return permAddress;
+	}
+	
+	private TextBoxControlExtension getTextBox(WebElement textBox) {
+		return new TextBoxControlExtension(textBox);
 	}
 }
