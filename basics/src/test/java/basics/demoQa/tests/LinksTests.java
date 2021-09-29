@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import basics.demoQa.foundation.DemoQaTestBase;
-import basics.demoQa.pageObjects.DemoQaHomePage;
 import basics.demoQa.pageObjects.LinksPage;
 
 public class LinksTests extends DemoQaTestBase{

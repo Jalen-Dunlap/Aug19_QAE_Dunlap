@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import basics.demoQa.foundation.LinksControlExtension;
 import basics.framework.PageObject;
 
 public class LinksPage extends PageObject {
@@ -23,21 +24,33 @@ public class LinksPage extends PageObject {
 	private WebElement responseText;
 
 	public DemoQaHomePage clickHomeLink() {
-		homeLink.click();
-
-		String[] windows = driver.getWindowHandles().toArray(new String[4]);
-		driver.switchTo().window(windows[1]);
+		linksControl(homeLink).click();
+		
+		goToNewestTab(getWindowsSize());
 
 		return new DemoQaHomePage(this.driver,this.baseUrl);
 	}
 
 	public LinksPage clickCreatedLink() {
-		createdLink.click();
+		linksControl(createdLink).click();
 		return this;
 	}
 
 	public String getResponseText() {
 		String response = responseText.getText();
 		return response;
+	}
+	
+	private int getWindowsSize() {
+		return this.driver.getWindowHandles().size();
+	}
+	
+	private void goToNewestTab(int tabs) {
+		String[] windows = this.driver.getWindowHandles().toArray(new String[tabs+1]);
+		driver.switchTo().window(windows[tabs+1]);
+	}
+	
+	private LinksControlExtension linksControl(WebElement link) {
+		return new LinksControlExtension(link);
 	}
 }
